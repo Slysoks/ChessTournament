@@ -1,11 +1,11 @@
 :root {
-  --header-in-margin: 10px;
+  --in-margin: 10px;
 }
 
 header {
   background-color: #242321;
-  width: calc(100% - --header-in-margin); height: 100px;
-  padding: 0 var(--header-in-margin);
+  width: calc(100% - --in-margin); height: 100px;
+  padding: 0 var(--in-margin);
   
   display: flex;
   justify-content: space-between;
@@ -20,5 +20,20 @@ header {
     font-size: 1.5rem;
     font-weight: 600;
     font-family: monospace;
+  }
+}
+
+main {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  flex-direction: row;
+
+  width: calc(100% - --in-margin - 100px);
+
+  & .game {
+    & img {
+      width: 250px;
+    }
   }
 }
